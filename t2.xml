@@ -76,32 +76,36 @@
                               </block>
                             </statement>
                             <next>
-                              <block type="controls_whileUntil" id="138" inline="false">
-                                <field name="MODE">UNTIL</field>
-                                <value name="NUMBER">
-                                  <block type="logic_compare" id="139" inline="true">
-                                    <field name="OP">LT</field>
-                                    <value name="A">
-                                      <block type="sensor_object" id="140">
-                                        <field name="OBJECT">REAR</field>
+                              <block type="movement_reverse" id="153">
+                                <next>
+                                  <block type="controls_whileUntil" id="138" inline="false">
+                                    <field name="MODE">UNTIL</field>
+                                    <value name="NUMBER">
+                                      <block type="logic_compare" id="139" inline="true">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="sensor_object" id="140">
+                                            <field name="OBJECT">REAR</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="141">
+                                            <field name="NUM">50</field>
+                                          </block>
+                                        </value>
                                       </block>
                                     </value>
-                                    <value name="B">
-                                      <block type="math_number" id="141">
-                                        <field name="NUM">50</field>
+                                    <statement name="DO">
+                                      <block type="robot_delay" id="142" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="143">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
                                       </block>
-                                    </value>
+                                    </statement>
                                   </block>
-                                </value>
-                                <statement name="DO">
-                                  <block type="robot_delay" id="142" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="143">
-                                        <field name="NUM">100</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </statement>
+                                </next>
                               </block>
                             </next>
                           </block>
